@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background-color: #a4ebf3;
+}
+
+.form-container {
+  margin: 0 150px 30px;
+  text-align: center;
+  padding: 10px 80px;
+  background-color: #e9b0df;
+  border: 1px solid #f1f1f1;
+}
+
+.form-container > h1 {
+  font-family: "Stalinist One", cursive;
+}
+
+.input-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.input-container > label {
+  font-family: "Oxygen", sans-serif;
+  font-size: 20px;
+  display: flex;
+}
+
+.textlabel {
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+.textinput {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 2px 0 2px 5px;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+#meme-container {
+  margin: 50px;
+  padding: 0 50px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.caption {
+  font-size: 18px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.meme {
+  margin: 20px auto;
+  border: 1px solid #16c79a;
+  width: 30%;
+  border-radius: 3%;
+  padding: 2px 3px 1px;
+  background-color: #bbdfc8;
+  position: relative;
+}
+
+.meme > img {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 3%;
+}
+
+.edit {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+
+#editform {
+  width: 35%;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px 80px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 1px solid #f1f1f1;
+  z-index: 9;
+  background-color: #e9b0df;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.form-text {
+  font-size: 20px;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 600;
+}

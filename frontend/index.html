@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xmeme</title>
+    <!-- Bootstrap cdn -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google font links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stalinist+One&family=Teko&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- main-container to hold the entire content -->
+    <div class="main-container">
+      <!-- form-container to hold the form to enter a new meme -->
+      <div class="form-container">
+        <h1>Meme Stream</h1>
+        <form>
+          <!-- Taking user inputs -->
+          <div class="input-container">
+            <label for="name" class="textlabel">Meme owner</label>
+            <input
+              class="textinput"
+              type="text"
+              name="name"
+              placeholder="Enter your full name"
+              id="owner-name"
+            />
+          </div>
+          <div class="input-container">
+            <label for="caption" class="textlabel">Caption</label>
+            <input
+              class="textinput"
+              type="text"
+              name="caption"
+              placeholder="Be creative with the caption"
+              id="meme-caption"
+            />
+          </div>
+          <div class="input-container">
+            <label for="url" class="textlabel">Meme URL</label>
+            <input
+              class="textinput"
+              type="text"
+              name="url"
+              placeholder="Enter URL of the meme here"
+              id="meme-url"
+            />
+          </div>
+          <!-- button to call submitMeme() on clicking -->
+          <button type="submit" onclick="submitMeme()" class="btn btn-primary">
+            Submit Meme
+          </button>
+        </form>
+      </div>
+      <!-- Form to edit the memes. It is initally hidden and is shown when the edit button in a meme is clicked -->
+      <form id="editform">
+        <!-- button to call hideForm() on clicking -->
+        <button type="button" onclick="hideForm()" class="back btn btn-primary">
+          Back
+        </button>
+        <p class="form-text">Updating Meme</p>
+
+        <!-- Taking user inputs -->
+        <div class="input-container">
+          <label for="caption" class="textlabel">Caption</label>
+          <input
+            class="textinput"
+            type="text"
+            name="caption"
+            placeholder="Enter new caption"
+            id="edit-meme-caption"
+          />
+        </div>
+        <div class="input-container">
+          <label for="url" class="textlabel">Meme URL</label>
+          <input
+            class="textinput"
+            type="text"
+            name="url"
+            placeholder="Enter new URL"
+            id="edit-meme-url"
+          />
+        </div>
+        <!-- button to call editMeme() on clicking -->
+        <button type="submit" onclick="editMeme()" class="btn btn-primary">
+          Edit Meme
+        </button>
+      </form>
+      <!-- div to display the entered memes (latest one on top) -->
+      <div id="meme-container">
+        <!-- The memes will be rendered dynamically here -->
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
