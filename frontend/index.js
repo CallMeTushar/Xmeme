@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:8081/memes";
-// const API_URL = "https://xmeme-backend-tushar.herokuapp.com/memes";
+// const API_URL = "http://localhost:8081/memes";
+const API_URL = "https://xmeme-backend-tushar.herokuapp.com/memes";
 
 // On loading the window , memes are rendered , the id is reset and the form is hidden. The form here refers to the edit meme form
 window.onload = () => {
@@ -94,7 +94,7 @@ function editMeme() {
   data = removeEmptyOrNull(data);
 
   // Sending a patch request to the backend
-  fetch(`http://localhost:8081/memes/${id}`, {
+  fetch(`https://xmeme-backend-tushar.herokuapp.com/memes/${id}`, {
     method: "PATCH",
     body: JSON.stringify(data),
     headers: {
