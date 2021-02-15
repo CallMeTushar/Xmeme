@@ -33,6 +33,9 @@ function submitMeme() {
   })
     .then((res) => res.json())
     .then(() => {
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 0);
       console.log("Added in DB");
     });
 }
@@ -104,6 +107,9 @@ function editMeme() {
   })
     .then((res) => res.json())
     .then(() => {
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 0);
       console.log(`Updated meme with id ${id}`);
     })
     .catch(() => {
